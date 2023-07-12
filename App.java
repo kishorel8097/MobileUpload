@@ -7,7 +7,7 @@ public class App {
     public static void main(String[] args) throws Exception {
         ArrayList<Rgba> rgba = new ArrayList<Rgba>();
 
-        for (int i = 0; i < 2500; i++) {
+        for (int i = 0; i < 1000000; i++) {
             rgba.add(new Rgba((int) (Math.random() * 255), (int) (Math.random() * 255), (int) (Math.random() * 255),
                     (int) (Math.random() * 255)));
         }
