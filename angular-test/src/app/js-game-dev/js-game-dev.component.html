@@ -1,0 +1,25 @@
+<div
+  class="w-full mt-7 flex flex-column justify-content-center align-items-center"
+>
+  <div>
+    <canvas class="game-window border-2 border-900"></canvas>
+  </div>
+
+  <div
+    class="flex flex-1 justify-content-around mt-1"
+    [ngStyle]="{ width: gameWidth + 'px' }"
+  >
+    <hold-button
+      [icon]="minusIcon"
+      (heldDown)="onMoveMinusDown()"
+      (released)="onMoveMinusUp()"
+    >
+    </hold-button>
+    <hold-button
+      [icon]="plusIcon"
+      (heldDown)="onMovePlusDown()"
+      (released)="onMovePlusUp()"
+    >
+    </hold-button>
+  </div>
+</div>

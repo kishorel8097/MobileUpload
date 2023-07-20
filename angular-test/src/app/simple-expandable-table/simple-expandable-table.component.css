@@ -1,0 +1,27 @@
+.tab-row-head {
+  background-color: #cfcfcf;
+}
+
+.tab-row-level1 {
+  background-color: #a4a4a4;
+}
+
+.tab-row-level2 {
+  background-color: #747474;
+}
+
+.tab-row-level3 {
+  background-color: #fffdb5;
+}
+
+.tab-row-level1 :first-child {
+  padding-left: 0px;
+}
+
+.tab-row-level2 :first-child {
+  padding-left: 12px;
+}
+
+.tab-row-level3 :first-child {
+  padding-left: 24px;
+}

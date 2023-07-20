@@ -1,0 +1,1 @@
+This component is used to test any feature.

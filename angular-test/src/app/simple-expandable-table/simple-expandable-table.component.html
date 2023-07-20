@@ -1,0 +1,23 @@
+<table>
+  <tr class="tab-row-head">
+    <th>Field 1</th>
+    <th>Field 2</th>
+    <th>Field 3</th>
+  </tr>
+  <ng-container
+    *ngTemplateOutlet="tableRow; context: { $implicit: tableData }"
+  ></ng-container>
+</table>
+<ng-template #tableRow let-data>
+  <ng-container *ngFor="let rowData of data; let i = index">
+    <tr [class]="'tab-row-level' + rowData.rowDepth">
+      <td *ngFor="let field of ['f1', 'f2', 'f3']">{{ rowData[field] }}</td>
+    </tr>
+    <ng-container *ngIf="rowData.data?.length">
+      <ng-container
+        *ngTemplateOutlet="tableRow; context: { $implicit: rowData.data }"
+      >
+      </ng-container>
+    </ng-container>
+  </ng-container>
+</ng-template>
